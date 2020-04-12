@@ -1,0 +1,192 @@
+
+*{
+  margin: 0px;
+  padding: 0px;
+
+}
+
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,500,600,700&display=swap&subset=latin-ext%27');
+
+
+.floatclear{
+clear: both;
+}
+
+ul, ol{
+list-style-type:none;
+}
+
+a{
+  text-decoration: none;
+}
+
+
+body{
+  font-family: 'Raleway', sans-serif;
+  background-image:url("../img/bg.jpg");        /*  arka plana resim ekleriz */
+  background-repeat: no-repeat;                  /* arka plan resminin tekrar etmesini önleriz*/
+  background-size: cover;                        
+  /* cover arka plan resmini ekranın genişliğine sığdırırız hiç boşluk bırakmyacak şekilde.
+  contain  de resim direk kendi boyutunda gelir */
+}
+
+#container{
+
+  width: 960px;
+  height: 800px;
+  margin-left: auto;            
+  margin-right: auto;             
+  /* sitemizdeki div i sağdan ve soltan ortalamak için margin kullanıyoruz.*/
+}
+
+#header{
+  width: 960px;
+  height: 110px;
+  
+}
+
+/* logomuzu ve navbarımızı aynı hizzada yan yana getirmek için float left ve right kullanıyoruz 
+bunun yerine display inline block diyerek de bu işlemi gerçekleştirebiliriz. */
+#logo{
+  width: 110px;
+  height: 110px;
+  float: left;
+  transform: scale(1);
+  transition: 0,4;
+}
+
+#logo:hover{
+transform: scale(1.15);
+}
+
+#navbar {
+  width: 840px;
+  height: 110px;
+  background-color: black;
+  float: right;
+  text-align: center;
+  vertical-align: top;
+}
+/*alt alta gelen listemizi yan yana yazmak için inline-block kullanarak kutu formundan yazı formuna geçiriyoruz ki metin gibi yan yana gelmesini sağlıyoruz.*/
+
+#navbar li{
+  display: inline-block;
+}
+
+/*öncelikli elamanlara yükseklik veriyoruz sonra line height veriyoruz display inline blok la bunu blok haline getiriyoruz daha sonra navbara text align center ve vertical align top yazarak listemizi yerine alıyoruz.*/
+
+#navbar a{
+  font-size: 22px;
+  color: white;
+ 
+  padding: 0px 14px;
+  height: 110px;
+  line-height: 110px;
+  display: inline-block;
+ 
+}
+
+/* menünün üzerine gelince renk değiştirmesi için a:hoveri uyguluyoruz */
+#navbar a:hover{
+  background-color:rgb(17, 15, 15);
+  color: grey;
+ font-size: 24px;
+}
+/* bannerın içindeki divleri istediğimiz pozisyona getirmek için banner a position relative yazıyoruz ki banner içinde olusturacagımız divler sadece bannerın içinde haraket etsin. */
+#banner{
+  width: 960px;
+  height: 444px;
+  background-color:#92c4eb;
+  margin-top: 10px;
+  position: relative;
+}
+/* div i mizi istediğimiz noktaya haraket ettirmek için önce position absolud daha sonrada bot top right left komutlarını kullanarak yerini belirliyoruz... */
+#bannersol{
+  width: 390px;
+  height: 270px;
+  position: absolute;
+  top: 40px;
+  left: 64px;
+}
+
+#bannersag{
+ width: 460px;
+ height: 420px;
+ position: absolute;
+ right: 35px;
+ bottom: 0px;
+}
+
+#bannersol h1 {
+  
+  font-size: 48px;
+  color: white;
+  font-weight: 600;
+}
+
+#bannersol h2 {
+  
+  font-size: 40px;
+  margin-top: 50px;
+  color: white;
+  font-weight: 400px;
+}
+
+#bannersag img{
+  transform: scale(1);
+  transition: all 0,4;
+  position: relative;
+  
+}
+/* 
+resmi büyütmek için resmimize transform etiketinin scale özelligini veriyoruz transition lada uygulanacak süreyi seçiyoruzzz. */
+
+#bannersag img:hover{
+  transform: scale(1.2);
+
+}
+
+#homeboxes {
+  width: 960px;
+  height: 490px;
+  background-color: #1c1c1a;
+  text-align: center;
+  vertical-align: top;
+
+}
+.box{
+  width: 280px;
+  height: 370px;
+  text-align: center;
+  padding: 50px 0px;
+  display: inline-block;
+  margin: 0px 16px;
+  vertical-align: top;
+}
+/* borderradius la kare bir resmi daire şekline getirebiliriz kenar yumusatmayı saglar */
+#circleimage{
+  width: 220px;
+  height:220px ;
+  overflow: hidden;
+  border-radius: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  transform: scale(1);
+  transition: all 0,4;
+}
+
+#circleimage:hover{
+transform: scale(1.1);
+}
+
+h3{
+font-size: 24px;
+font-weight: 700px;
+color: white;
+margin: 15px 0px;
+}
+p{
+  font-weight: 500px;
+  font-size: 20px;
+  color: white;
+}
